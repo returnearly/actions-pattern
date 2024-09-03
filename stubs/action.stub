@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use ReturnEarly\ActionsPattern\Interfaces\ActionsPatternInterface;
+use ReturnEarly\ActionsPattern\Traits\ActionsPattern;
+
+class {{ class }} implements ActionsPatternInterface
+{
+    use ActionsPattern;
+
+    public function __construct()
+    {
+        //
+    }
+
+    public function handle(): void
+    {
+        //
+    }
+}

@@ -1,24 +1,23 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "returnearly/actions-pattern",
+    "description": " A minimal package for using the actions pattern in Laravel. ",
     "keywords": [
-        ":vendor_name",
+        "ReturnEarly",
         "laravel",
-        ":package_slug"
+        "actions-pattern"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/returnearly/actions-pattern",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "Tom Schlick",
+            "email": "tom@returnearly.net",
         }
     ],
     "require": {
         "php": "^8.2",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0"
+        "illuminate/contracts": ">=10.0"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -30,24 +29,23 @@
         "pestphp/pest-plugin-laravel": "^2.3",
         "phpstan/extension-installer": "^1.3",
         "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3",
-        "spatie/laravel-ray": "^1.35"
+        "phpstan/phpstan-phpunit": "^1.3"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "ReturnEarly\\ActionsPattern\\": "src/",
+            "ReturnEarly\\ActionsPattern\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "ReturnEarly\\ActionsPattern\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-actions-pattern --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,10 +71,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "ReturnEarly\\ActionsPattern\\ActionsPatternServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "ActionsPattern": "ReturnEarly\\ActionsPattern\\Facades\\ActionsPattern"
             }
         }
     },
