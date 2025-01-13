@@ -15,6 +15,32 @@ You can install the package via composer:
 composer require returnearly/actions-pattern
 ```
 
+## Action Class
+    
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Actions;
+
+final readonly class MyCustomAction
+{
+    public function __construct(
+        private MyDependency $dependency
+    ) {
+    }
+
+    public function handle(int $amount): void
+    {
+        $amount += 10;
+    
+        $this->dependency->doSomething($amount);
+    }
+}
+
+```
+
 ## Usage
 
 ```php
@@ -40,6 +66,15 @@ class MyController
 }
 
 ```
+
+## Create An Action
+    
+```bash
+
+php artisan make:action MyCustomAction --test
+
+```
+Running the above command will create a new action class in the `app/Actions` directory and the corresponding test in the `tests/Feature/Actions` directory.
 
 ## Testing
 
