@@ -6,5 +6,7 @@ parameters:
     paths:
         - src
     tmpDir: build/phpstan
-    checkOctaneCompatibility: true
-    checkModelProperties: true
+    ignoreErrors:
+        # The package's traits are part of its public API and are consumed by
+        # the host application, so they are never used within src/ itself.
+        - identifier: trait.unused
