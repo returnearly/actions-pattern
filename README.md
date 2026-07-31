@@ -5,6 +5,7 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/returnearly/actions-pattern/run-tests.yml?branch=master&label=tests&style=flat-square)](https://github.com/returnearly/actions-pattern/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/returnearly/actions-pattern/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/returnearly/actions-pattern/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/returnearly/actions-pattern.svg?style=flat-square)](https://packagist.org/packages/returnearly/actions-pattern)
+[![skills.sh](https://skills.sh/b/returnearly/actions-pattern)](https://skills.sh/returnearly/actions-pattern)
 
 A minimal package for using the actions pattern in Laravel.
 
@@ -36,6 +37,14 @@ You can install the package via composer:
 
 ```bash
 composer require returnearly/actions-pattern
+```
+
+### Agent skill
+
+This repository includes an [Agent Skill](https://agentskills.io) that teaches coding agents the actions/entrypoints pattern. Install it with:
+
+```bash
+npx skills add returnearly/actions-pattern
 ```
 
 ## Action Class
